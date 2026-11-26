@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Receipts — every answer has a receipt</title>
+    <meta
+      name="description"
+      content="Decision memory with provenance. Ask what your company decided, see the evidence, who approved it, what it replaced — and what is no longer true."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%231f5b45'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' fill='%23f4f0e6' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <a class="brand" href="#" id="brand" aria-label="Receipts home">
+          <span class="brand-mark" aria-hidden="true">R</span>
+          <span class="brand-text">
+            <strong>Receipts</strong>
+            <span>decision memory</span>
+          </span>
+        </a>
+
+        <nav class="tabs" aria-label="Views">
+          <button class="tab is-active" data-view="ask" type="button">Ask</button>
+          <button class="tab" data-view="audit" type="button">
+            Audit <span class="tab-count" id="audit-count">–</span>
+          </button>
+        </nav>
+
+        <div class="topmeta">
+          <span id="corpus-stats">opening graph…</span>
+          <span class="relate-badge" title="Built on Relate, the embedded graph database">RELATE</span>
+        </div>
+      </header>
+
+      <main class="shell">
+        <section class="workspace" id="workspace" aria-live="polite"></section>
+
+        <aside class="graph-panel" aria-label="Graph explorer">
+          <header class="graph-head">
+            <div>
+              <p class="graph-kicker" id="graph-kicker">Whole corpus</p>
+              <h2 id="graph-title">The decision graph</h2>
+            </div>
+            <span class="graph-meta" id="graph-meta"></span>
+          </header>
+
+          <div class="graph-canvas" id="graph"></div>
+          <div class="graph-caption" id="graph-caption">
+            Click a node to inspect it.
+          </div>
+
+          <div class="graph-legend" aria-hidden="true">
+            <span><i class="dot dot--decision"></i>Decision</span>
+            <span><i class="dot dot--topic"></i>Topic</span>
+            <span><i class="dot dot--evidence"></i>Evidence</span>
+            <span><i class="dot dot--person"></i>Person</span>
+            <span><i class="dot dot--note"></i>Note</span>
+            <span><i class="dot dot--source"></i>Source</span>
+            <span><i class="dot dot--past"></i>Past / proposed</span>
+          </div>
+
+          <div class="graph-detail" id="graph-detail"></div>
+        </aside>
+      </main>
+    </div>
+
+    <div class="boot" id="boot">
+      <div class="boot-seal" aria-hidden="true">R</div>
+      <p id="boot-message">Opening the graph…</p>
+      <div class="boot-line"><span></span></div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

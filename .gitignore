@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+
+# Rebuilt with `npm run seed`. Committed on purpose so judges can inspect a
+# persistent store immediately; keep the generated file in sync with seed.json.

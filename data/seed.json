@@ -1,0 +1,880 @@
+{
+  "company": {
+    "name": "Northwind Labs",
+    "description": "A fictional B2B analytics company used as the demo corpus."
+  },
+  "people": [
+    {
+      "id": "maya",
+      "name": "Maya Chen",
+      "role": "VP Engineering"
+    },
+    {
+      "id": "omar",
+      "name": "Omar Haddad",
+      "role": "CTO"
+    },
+    {
+      "id": "priya",
+      "name": "Priya Nair",
+      "role": "Security Lead"
+    },
+    {
+      "id": "lucas",
+      "name": "Lucas Meyer",
+      "role": "Product Lead"
+    },
+    {
+      "id": "sofia",
+      "name": "Sofia Rossi",
+      "role": "Data Engineer"
+    },
+    {
+      "id": "dan",
+      "name": "Dan Okafor",
+      "role": "Platform Engineer"
+    },
+    {
+      "id": "elena",
+      "name": "Elena Petrova",
+      "role": "Compliance Counsel"
+    },
+    {
+      "id": "ravi",
+      "name": "Ravi Shah",
+      "role": "Customer Success Lead"
+    }
+  ],
+  "topics": [
+    {
+      "id": "auth",
+      "slug": "auth-provider",
+      "name": "Authentication provider",
+      "owner": "maya",
+      "description": "How users sign in, and which identity vendor we pay.",
+      "short": "Auth"
+    },
+    {
+      "id": "database",
+      "slug": "primary-database",
+      "name": "Primary database",
+      "owner": "maya",
+      "description": "The system of record for customer data.",
+      "short": "Database"
+    },
+    {
+      "id": "vector",
+      "slug": "vector-search",
+      "name": "Vector search",
+      "owner": "sofia",
+      "description": "Embedding storage and nearest-neighbor retrieval.",
+      "short": "Vector"
+    },
+    {
+      "id": "deploy",
+      "slug": "deployment-platform",
+      "name": "Deployment platform",
+      "owner": "dan",
+      "description": "Where the application runs.",
+      "short": "Deployment"
+    },
+    {
+      "id": "pricing",
+      "slug": "pricing-model",
+      "name": "Pricing model",
+      "owner": "lucas",
+      "description": "How customers are charged.",
+      "short": "Pricing"
+    },
+    {
+      "id": "retention",
+      "slug": "data-retention",
+      "name": "Data retention",
+      "owner": "elena",
+      "description": "How long customer logs and records are kept.",
+      "short": "Retention"
+    },
+    {
+      "id": "incident",
+      "slug": "incident-response",
+      "name": "Incident response",
+      "owner": "dan",
+      "description": "How we page, triage, and communicate during outages.",
+      "short": "Incidents"
+    },
+    {
+      "id": "vendors",
+      "slug": "vendor-security",
+      "name": "Vendor security",
+      "owner": "priya",
+      "description": "Security requirements for third-party vendors.",
+      "short": "Vendors"
+    },
+    {
+      "id": "search",
+      "slug": "full-text-search",
+      "name": "Full-text search",
+      "owner": "sofia",
+      "description": "Keyword search over documents and logs.",
+      "short": "Search"
+    },
+    {
+      "id": "sso",
+      "slug": "enterprise-sso",
+      "name": "Enterprise SSO",
+      "owner": "lucas",
+      "description": "Single sign-on requirements for enterprise customers.",
+      "short": "SSO"
+    },
+    {
+      "id": "scaling",
+      "slug": "analytics-scaling",
+      "name": "Analytics scaling",
+      "owner": "maya",
+      "description": "How we scale read-heavy analytics workloads.",
+      "short": "Analytics"
+    },
+    {
+      "id": "provisioning",
+      "slug": "user-provisioning",
+      "name": "User provisioning",
+      "owner": "lucas",
+      "description": "How enterprise users are created, updated, and deprovisioned.",
+      "short": "Provisioning"
+    }
+  ],
+  "sources": [
+    {
+      "id": "internal-memo",
+      "title": "Internal engineering memo",
+      "kind": "internal"
+    },
+    {
+      "id": "auth0",
+      "title": "Auth0 vendor documentation",
+      "kind": "vendor"
+    },
+    {
+      "id": "okta",
+      "title": "Okta vendor documentation",
+      "kind": "vendor"
+    },
+    {
+      "id": "security-review",
+      "title": "Security review workspace",
+      "kind": "internal"
+    },
+    {
+      "id": "eng-estimate",
+      "title": "Engineering estimate",
+      "kind": "internal"
+    },
+    {
+      "id": "bench-repo",
+      "title": "Benchmark notebook repository",
+      "kind": "internal"
+    },
+    {
+      "id": "incident-report",
+      "title": "Incident report archive",
+      "kind": "internal"
+    },
+    {
+      "id": "finance-model",
+      "title": "Finance model",
+      "kind": "internal"
+    },
+    {
+      "id": "research-repo",
+      "title": "Customer research repository",
+      "kind": "internal"
+    },
+    {
+      "id": "policy-repo",
+      "title": "Policy repository",
+      "kind": "internal"
+    },
+    {
+      "id": "legal-memo",
+      "title": "Legal memo archive",
+      "kind": "internal"
+    },
+    {
+      "id": "eur-lex",
+      "title": "EUR-Lex regulation text",
+      "kind": "public"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "auth0-eval-2025",
+      "title": "Auth0 evaluation",
+      "kind": "memo",
+      "published_at": "2025-02-20",
+      "strength": 0.8,
+      "status": "active",
+      "source": "internal-memo"
+    },
+    {
+      "id": "auth0-renewal-2026",
+      "title": "Auth0 renewal quote: +42%",
+      "kind": "vendor-quote",
+      "published_at": "2026-03-15",
+      "strength": 0.9,
+      "status": "active",
+      "source": "auth0"
+    },
+    {
+      "id": "okta-proposal-2026",
+      "title": "Okta enterprise proposal",
+      "kind": "vendor-quote",
+      "published_at": "2026-03-20",
+      "strength": 0.9,
+      "status": "active",
+      "source": "okta"
+    },
+    {
+      "id": "auth-security-review-2026",
+      "title": "Security review: Auth0 vs Okta",
+      "kind": "memo",
+      "published_at": "2026-04-01",
+      "strength": 0.95,
+      "status": "active",
+      "source": "security-review"
+    },
+    {
+      "id": "auth-migration-estimate-2026",
+      "title": "Migration estimate: 6 weeks",
+      "kind": "estimate",
+      "published_at": "2026-04-05",
+      "strength": 0.8,
+      "status": "active",
+      "source": "eng-estimate"
+    },
+    {
+      "id": "postgres-bench-2025",
+      "title": "Postgres benchmark at 2 TB",
+      "kind": "benchmark",
+      "published_at": "2025-01-10",
+      "strength": 0.9,
+      "status": "active",
+      "source": "bench-repo"
+    },
+    {
+      "id": "pgvector-bench-2025",
+      "title": "pgvector benchmark at 10M vectors",
+      "kind": "benchmark",
+      "published_at": "2025-05-20",
+      "strength": 0.7,
+      "status": "active",
+      "source": "bench-repo"
+    },
+    {
+      "id": "qdrant-bench-2026",
+      "title": "Qdrant benchmark: 4x p95 improvement",
+      "kind": "benchmark",
+      "published_at": "2026-02-25",
+      "strength": 0.85,
+      "status": "active",
+      "source": "bench-repo"
+    },
+    {
+      "id": "fly-eval-2025",
+      "title": "Fly.io evaluation",
+      "kind": "memo",
+      "published_at": "2025-01-20",
+      "strength": 0.75,
+      "status": "active",
+      "source": "internal-memo"
+    },
+    {
+      "id": "fly-outage-2026",
+      "title": "Fly.io outage postmortem",
+      "kind": "incident",
+      "published_at": "2026-05-10",
+      "strength": 0.9,
+      "status": "active",
+      "source": "incident-report"
+    },
+    {
+      "id": "aws-cost-model-2026",
+      "title": "AWS cost model",
+      "kind": "estimate",
+      "published_at": "2026-05-01",
+      "strength": 0.75,
+      "status": "active",
+      "source": "finance-model"
+    },
+    {
+      "id": "pricing-interviews-2025",
+      "title": "Pricing interviews: 24 customers",
+      "kind": "research",
+      "published_at": "2025-03-15",
+      "strength": 0.7,
+      "status": "active",
+      "source": "research-repo"
+    },
+    {
+      "id": "pricing-research-2026",
+      "title": "Usage-based pricing research",
+      "kind": "research",
+      "published_at": "2026-06-10",
+      "strength": 0.8,
+      "status": "active",
+      "source": "research-repo"
+    },
+    {
+      "id": "retention-policy-2025",
+      "title": "Data retention policy v2",
+      "kind": "policy",
+      "published_at": "2025-04-15",
+      "strength": 0.9,
+      "status": "active",
+      "source": "policy-repo"
+    },
+    {
+      "id": "legal-memo-2026",
+      "title": "EU data retention memo",
+      "kind": "legal",
+      "published_at": "2026-07-01",
+      "strength": 0.9,
+      "status": "retracted",
+      "source": "legal-memo",
+      "retracted_at": "2026-08-15",
+      "reason": "The cited regulation was superseded; the memo's 90-day recommendation is no longer supported."
+    },
+    {
+      "id": "eu-reg-change-2026",
+      "title": "EU regulation update",
+      "kind": "regulation",
+      "published_at": "2026-08-10",
+      "strength": 0.95,
+      "status": "active",
+      "source": "eur-lex",
+      "contradicts": "legal-memo-2026"
+    },
+    {
+      "id": "pagerduty-review-2025",
+      "title": "PagerDuty evaluation",
+      "kind": "memo",
+      "published_at": "2025-01-10",
+      "strength": 0.8,
+      "status": "active",
+      "source": "internal-memo"
+    },
+    {
+      "id": "soc2-policy-2025",
+      "title": "Vendor SOC 2 policy",
+      "kind": "policy",
+      "published_at": "2025-02-01",
+      "strength": 0.95,
+      "status": "active",
+      "source": "policy-repo"
+    },
+    {
+      "id": "elastic-cost-2025",
+      "title": "Elasticsearch cost review",
+      "kind": "memo",
+      "published_at": "2025-06-15",
+      "strength": 0.7,
+      "status": "active",
+      "source": "finance-model"
+    },
+    {
+      "id": "opensearch-bench-2026",
+      "title": "OpenSearch benchmark",
+      "kind": "benchmark",
+      "published_at": "2026-03-15",
+      "strength": 0.8,
+      "status": "active",
+      "source": "bench-repo"
+    },
+    {
+      "id": "enterprise-requirements-2026",
+      "title": "Enterprise requirements: SSO",
+      "kind": "research",
+      "published_at": "2026-01-15",
+      "strength": 0.85,
+      "status": "active",
+      "source": "research-repo"
+    },
+    {
+      "id": "read-replica-bench-2026",
+      "title": "Read replica benchmark",
+      "kind": "benchmark",
+      "published_at": "2026-01-05",
+      "strength": 0.8,
+      "status": "active",
+      "source": "bench-repo"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "auth-auth0-2025",
+      "statement": "Use Auth0 for authentication.",
+      "status": "superseded",
+      "valid_from": "2025-03-10",
+      "valid_to": "2026-04-18",
+      "recorded_at": "2025-03-10",
+      "confidence": 0.8,
+      "topic": "auth",
+      "approved_by": "maya",
+      "supersedes": null,
+      "evidence": [
+        "auth0-eval-2025"
+      ]
+    },
+    {
+      "id": "auth-okta-2026",
+      "statement": "Migrate authentication to Okta.",
+      "status": "current",
+      "valid_from": "2026-04-18",
+      "valid_to": null,
+      "recorded_at": "2026-04-18",
+      "confidence": 0.9,
+      "topic": "auth",
+      "approved_by": "omar",
+      "supersedes": "auth-auth0-2025",
+      "evidence": [
+        "auth0-renewal-2026",
+        "okta-proposal-2026",
+        "auth-security-review-2026",
+        "auth-migration-estimate-2026"
+      ]
+    },
+    {
+      "id": "db-postgres-2025",
+      "statement": "Use Postgres as the primary database.",
+      "status": "current",
+      "valid_from": "2025-01-15",
+      "valid_to": null,
+      "recorded_at": "2025-01-15",
+      "confidence": 0.9,
+      "topic": "database",
+      "approved_by": "maya",
+      "supersedes": null,
+      "evidence": [
+        "postgres-bench-2025"
+      ]
+    },
+    {
+      "id": "vector-pgvector-2025",
+      "statement": "Use pgvector for embeddings.",
+      "status": "superseded",
+      "valid_from": "2025-06-01",
+      "valid_to": "2026-03-12",
+      "recorded_at": "2025-06-01",
+      "confidence": 0.7,
+      "topic": "vector",
+      "approved_by": "sofia",
+      "supersedes": null,
+      "evidence": [
+        "pgvector-bench-2025"
+      ]
+    },
+    {
+      "id": "vector-qdrant-2026",
+      "statement": "Adopt Qdrant for vector search.",
+      "status": "current",
+      "valid_from": "2026-03-12",
+      "valid_to": null,
+      "recorded_at": "2026-03-12",
+      "confidence": 0.85,
+      "topic": "vector",
+      "approved_by": "sofia",
+      "supersedes": "vector-pgvector-2025",
+      "evidence": [
+        "qdrant-bench-2026",
+        "pgvector-bench-2025"
+      ]
+    },
+    {
+      "id": "deploy-fly-2025",
+      "statement": "Deploy on Fly.io.",
+      "status": "superseded",
+      "valid_from": "2025-02-01",
+      "valid_to": "2026-05-20",
+      "recorded_at": "2025-02-01",
+      "confidence": 0.75,
+      "topic": "deploy",
+      "approved_by": "dan",
+      "supersedes": null,
+      "evidence": [
+        "fly-eval-2025"
+      ]
+    },
+    {
+      "id": "deploy-aws-2026",
+      "statement": "Move deployment to AWS ECS.",
+      "status": "current",
+      "valid_from": "2026-05-20",
+      "valid_to": null,
+      "recorded_at": "2026-05-20",
+      "confidence": 0.8,
+      "topic": "deploy",
+      "approved_by": "dan",
+      "supersedes": "deploy-fly-2025",
+      "evidence": [
+        "fly-outage-2026",
+        "aws-cost-model-2026"
+      ]
+    },
+    {
+      "id": "pricing-seat-2025",
+      "statement": "Use seat-based pricing.",
+      "status": "superseded",
+      "valid_from": "2025-04-01",
+      "valid_to": "2026-06-30",
+      "recorded_at": "2025-04-01",
+      "confidence": 0.7,
+      "topic": "pricing",
+      "approved_by": "lucas",
+      "supersedes": null,
+      "evidence": [
+        "pricing-interviews-2025"
+      ]
+    },
+    {
+      "id": "pricing-usage-2026",
+      "statement": "Use usage-based pricing with a platform fee.",
+      "status": "current",
+      "valid_from": "2026-06-30",
+      "valid_to": null,
+      "recorded_at": "2026-06-30",
+      "confidence": 0.8,
+      "topic": "pricing",
+      "approved_by": "lucas",
+      "supersedes": "pricing-seat-2025",
+      "evidence": [
+        "pricing-research-2026",
+        "pricing-interviews-2025"
+      ]
+    },
+    {
+      "id": "retention-90d-2025",
+      "statement": "Retain customer logs for 90 days.",
+      "status": "current",
+      "valid_from": "2025-05-01",
+      "valid_to": null,
+      "recorded_at": "2025-05-01",
+      "confidence": 0.75,
+      "topic": "retention",
+      "approved_by": "elena",
+      "supersedes": null,
+      "evidence": [
+        "retention-policy-2025",
+        "legal-memo-2026"
+      ]
+    },
+    {
+      "id": "retention-180d-proposed",
+      "statement": "Extend log retention to 180 days for EU customers.",
+      "status": "proposed",
+      "valid_from": null,
+      "valid_to": null,
+      "recorded_at": "2026-09-01",
+      "confidence": 0.5,
+      "topic": "retention",
+      "approved_by": null,
+      "supersedes": null,
+      "evidence": [
+        "legal-memo-2026",
+        "eu-reg-change-2026"
+      ]
+    },
+    {
+      "id": "ir-pagerduty-2025",
+      "statement": "Use PagerDuty for incident response.",
+      "status": "current",
+      "valid_from": "2025-01-20",
+      "valid_to": null,
+      "recorded_at": "2025-01-20",
+      "confidence": 0.9,
+      "topic": "incident",
+      "approved_by": "dan",
+      "supersedes": null,
+      "evidence": [
+        "pagerduty-review-2025"
+      ]
+    },
+    {
+      "id": "vendor-soc2-2025",
+      "statement": "Require SOC 2 from all vendors.",
+      "status": "current",
+      "valid_from": "2025-02-15",
+      "valid_to": null,
+      "recorded_at": "2025-02-15",
+      "confidence": 0.95,
+      "topic": "vendors",
+      "approved_by": "priya",
+      "supersedes": null,
+      "evidence": [
+        "soc2-policy-2025"
+      ]
+    },
+    {
+      "id": "search-elastic-2025",
+      "statement": "Use Elasticsearch for full-text search.",
+      "status": "superseded",
+      "valid_from": "2025-07-01",
+      "valid_to": "2026-04-02",
+      "recorded_at": "2025-07-01",
+      "confidence": 0.7,
+      "topic": "search",
+      "approved_by": "sofia",
+      "supersedes": null,
+      "evidence": [
+        "elastic-cost-2025"
+      ]
+    },
+    {
+      "id": "search-opensearch-2026",
+      "statement": "Replace Elasticsearch with OpenSearch.",
+      "status": "current",
+      "valid_from": "2026-04-02",
+      "valid_to": null,
+      "recorded_at": "2026-04-02",
+      "confidence": 0.8,
+      "topic": "search",
+      "approved_by": "sofia",
+      "supersedes": "search-elastic-2025",
+      "evidence": [
+        "opensearch-bench-2026",
+        "elastic-cost-2025"
+      ]
+    },
+    {
+      "id": "auth-sso-2026",
+      "statement": "Require SSO for the enterprise tier.",
+      "status": "current",
+      "valid_from": "2026-02-01",
+      "valid_to": null,
+      "recorded_at": "2026-02-01",
+      "confidence": 0.85,
+      "topic": "sso",
+      "approved_by": "lucas",
+      "supersedes": null,
+      "evidence": [
+        "enterprise-requirements-2026"
+      ]
+    },
+    {
+      "id": "scaling-read-replica-2026",
+      "statement": "Add read replicas for analytics workloads.",
+      "status": "current",
+      "valid_from": "2026-01-10",
+      "valid_to": null,
+      "recorded_at": "2026-01-10",
+      "confidence": 0.8,
+      "topic": "scaling",
+      "approved_by": "maya",
+      "supersedes": null,
+      "evidence": [
+        "read-replica-bench-2026"
+      ]
+    },
+    {
+      "id": "provisioning-scim-2026",
+      "statement": "Enable SCIM provisioning for enterprise accounts.",
+      "status": "current",
+      "valid_from": "2026-02-15",
+      "valid_to": null,
+      "recorded_at": "2026-02-15",
+      "confidence": 0.7,
+      "topic": "provisioning",
+      "approved_by": "lucas",
+      "supersedes": null,
+      "evidence": []
+    }
+  ],
+  "notes": [
+    {
+      "id": "note-auth0-runbook",
+      "title": "Authentication runbook",
+      "body": "Our authentication stack uses Auth0. To rotate the signing key, open the Auth0 dashboard, create a new signing key, and deploy it to the auth service. The runbook covers login, logout, MFA, and the Auth0 management API.",
+      "created_at": "2025-04-01",
+      "canonical": true,
+      "mentions": [
+        "auth"
+      ],
+      "records": "auth-auth0-2025"
+    },
+    {
+      "id": "note-vector-architecture",
+      "title": "Vector search architecture",
+      "body": "Embeddings are stored in Postgres using pgvector. The index is rebuilt nightly, and the retrieval service queries the embeddings table with cosine distance. This document covers the pgvector schema and the rebuild job.",
+      "created_at": "2025-07-01",
+      "canonical": true,
+      "mentions": [
+        "vector"
+      ],
+      "records": "vector-pgvector-2025"
+    },
+    {
+      "id": "note-deploy-guide",
+      "title": "Deployment guide",
+      "body": "Production deployments run on Fly.io. Use fly deploy from the main branch, then check the Fly.io dashboard for health checks. This guide covers regions, secrets, and rollbacks.",
+      "created_at": "2025-03-01",
+      "canonical": true,
+      "mentions": [
+        "deploy"
+      ],
+      "records": "deploy-fly-2025"
+    },
+    {
+      "id": "note-pricing-page",
+      "title": "Pricing page copy",
+      "body": "Plans are priced per seat: Starter, Growth, and Enterprise. Each seat includes the full analytics workspace. Annual billing receives a discount.",
+      "created_at": "2025-05-01",
+      "canonical": true,
+      "mentions": [
+        "pricing"
+      ],
+      "records": "pricing-seat-2025"
+    },
+    {
+      "id": "note-auth-migration",
+      "title": "Auth migration plan",
+      "body": "We are migrating from Auth0 to Okta. The migration is scheduled for Q2 and covers SSO, SCIM provisioning, and the management API. Track progress in the migration project.",
+      "created_at": "2026-04-20",
+      "canonical": false,
+      "mentions": [
+        "auth"
+      ],
+      "records": "auth-okta-2026"
+    },
+    {
+      "id": "note-retention-policy",
+      "title": "Data retention policy",
+      "body": "Customer logs are retained for 90 days. EU customer data follows the same schedule. The policy covers logs, analytics events, and support attachments.",
+      "created_at": "2025-06-01",
+      "canonical": true,
+      "mentions": [
+        "retention"
+      ],
+      "records": "retention-90d-2025"
+    },
+    {
+      "id": "note-search-architecture",
+      "title": "Search architecture",
+      "body": "Full-text search runs on Elasticsearch. Index templates live in the search repository, and the ingest pipeline is managed by the data team.",
+      "created_at": "2025-08-01",
+      "canonical": true,
+      "mentions": [
+        "search"
+      ],
+      "records": "search-elastic-2025"
+    },
+    {
+      "id": "note-onboarding",
+      "title": "New hire onboarding",
+      "body": "Start with the auth runbook and the deployment guide. Ask your buddy for access to the analytics workspace, then read the incident response runbook.",
+      "created_at": "2026-01-10",
+      "canonical": false,
+      "mentions": [
+        "auth",
+        "deploy"
+      ],
+      "records": null
+    },
+    {
+      "id": "note-qdrant-adr",
+      "title": "ADR-014: Adopt Qdrant",
+      "body": "We adopted Qdrant after benchmarking 10M vectors. p95 latency improved 4x over pgvector, and the operational overhead is acceptable. The retrieval service now talks to Qdrant.",
+      "created_at": "2026-03-15",
+      "canonical": false,
+      "mentions": [
+        "vector"
+      ],
+      "records": "vector-qdrant-2026"
+    },
+    {
+      "id": "note-aws-migration",
+      "title": "AWS migration checklist",
+      "body": "The move from Fly.io to AWS ECS is complete. Update your local environment, rotate the deployment credentials, and check the new CloudWatch dashboards.",
+      "created_at": "2026-05-25",
+      "canonical": false,
+      "mentions": [
+        "deploy"
+      ],
+      "records": "deploy-aws-2026"
+    },
+    {
+      "id": "note-usage-pricing",
+      "title": "Usage pricing rollout",
+      "body": "The new usage-based plan with a platform fee goes live July 1. Sales has the new calculator, and the pricing page has been updated.",
+      "created_at": "2026-07-05",
+      "canonical": false,
+      "mentions": [
+        "pricing"
+      ],
+      "records": "pricing-usage-2026"
+    },
+    {
+      "id": "note-soc2",
+      "title": "Vendor security policy",
+      "body": "All vendors must provide SOC 2 Type II. Exceptions require Priya's approval and a documented compensating control.",
+      "created_at": "2025-02-20",
+      "canonical": true,
+      "mentions": [
+        "vendors"
+      ],
+      "records": "vendor-soc2-2025"
+    },
+    {
+      "id": "note-incident-runbook",
+      "title": "Incident response runbook",
+      "body": "Page the on-call engineer through PagerDuty. Severity 1 incidents get a dedicated incident channel and a customer-facing status update within 30 minutes.",
+      "created_at": "2025-02-01",
+      "canonical": true,
+      "mentions": [
+        "incident"
+      ],
+      "records": "ir-pagerduty-2025"
+    },
+    {
+      "id": "note-retention-proposal",
+      "title": "Retention proposal",
+      "body": "Proposal to extend log retention to 180 days for EU customers. Legal is reviewing the new regulation, and the proposal is not yet approved.",
+      "created_at": "2026-09-01",
+      "canonical": false,
+      "mentions": [
+        "retention"
+      ],
+      "records": "retention-180d-proposed"
+    },
+    {
+      "id": "note-sso",
+      "title": "Enterprise SSO requirements",
+      "body": "Enterprise customers require SAML SSO and SCIM provisioning. The enterprise tier includes SSO, audit logs, and a dedicated success manager.",
+      "created_at": "2026-02-05",
+      "canonical": false,
+      "mentions": [
+        "sso"
+      ],
+      "records": "auth-sso-2026"
+    },
+    {
+      "id": "note-scaling",
+      "title": "Analytics scaling plan",
+      "body": "Add read replicas for the analytics workload. The benchmark shows a 3x improvement in dashboard load time at peak.",
+      "created_at": "2026-01-12",
+      "canonical": false,
+      "mentions": [
+        "scaling"
+      ],
+      "records": "scaling-read-replica-2026"
+    },
+    {
+      "id": "note-scim",
+      "title": "SCIM provisioning rollout",
+      "body": "SCIM provisioning is enabled for enterprise accounts. The rollout covers user creation, updates, and deprovisioning through the identity provider.",
+      "created_at": "2026-02-20",
+      "canonical": false,
+      "mentions": [
+        "provisioning"
+      ],
+      "records": "provisioning-scim-2026"
+    }
+  ]
+}
