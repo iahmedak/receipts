@@ -72,7 +72,7 @@ $voice = Join-Path $work "narration.wav"
 & ffmpeg -y -f concat -safe 0 -i $list -c copy $voice 2>$null
 
 # SRT captions, timed to the scene cuts.
-$srt = Join-Path $work "captions.srt"
+$srt = Join-Path $root "docs/captions.srt"
 $sb = New-Object System.Text.StringBuilder
 $t = 0
 for ($i = 0; $i -lt $scenes.Count; $i++) {
@@ -91,9 +91,8 @@ $segments = @()
 for ($i = 0; $i -lt $scenes.Count; $i++) {
   $scene = $scenes[$i]
   $out = Join-Path $work ("scene{0}.mp4" -f $i)
-  $frames = $scene.dur * 25
-  $vf = "scale=1920:1080,zoompan=z='min(zoom+0.00035,1.10)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=$frames`:s=1280x720:fps=25,format=yuv420p"
-  & ffmpeg -y -loop 1 -t $scene.dur -i $scene.image -vf $vf -c:v libx264 -preset fast -crf 22 -pix_fmt yuv420p -an $out 2>$null
+  $vf = "scale=1280:720,fps=25,format=yuv420p"
+  & ffmpeg -y -loop 1 -t $scene.dur -i $scene.image -vf $vf -c:v libx264 -preset veryfast -crf 22 -pix_fmt yuv420p -an $out 2>$null
   $segments += $out
 }
 
@@ -102,8 +101,8 @@ $segList = Join-Path $work "segment-list.txt"
 $silent = Join-Path $work "silent.mp4"
 & ffmpeg -y -f concat -safe 0 -i $segList -c copy $silent 2>$null
 
-$subFilter = "subtitles=$($srt.Replace('\','/')):force_style='FontName=Arial,FontSize=24,PrimaryColour=&H00FFFFFF,OutlineColour=&H00000000,BorderStyle=1,Outline=2,Shadow=0,Alignment=2,MarginV=32'"
-& ffmpeg -y -i $silent -i $voice -vf $subFilter -c:v libx264 -preset medium -crf 23 -pix_fmt yuv420p -c:a aac -b:a 128k -shortest docs/demo.mp4 2>$null
+$subFilter = "subtitles=docs/captions.srt:force_style='FontName=Arial,FontSize=13,PrimaryColour=&H00FFFFFF,OutlineColour=&H00000000,BorderStyle=1,Outline=1,Shadow=0,Alignment=2,MarginV=22'"
+& ffmpeg -y -i $silent -i $voice -vf $subFilter -af apad -c:v libx264 -preset medium -crf 23 -pix_fmt yuv420p -c:a aac -b:a 128k -shortest docs/demo.mp4 2>$null
 
 if (Test-Path docs/demo.mp4) {
   $f = Get-Item docs/demo.mp4

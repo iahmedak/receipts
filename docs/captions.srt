@@ -1,0 +1,25 @@
+﻿1
+00:00:00,000 --> 00:00:18,000
+Most tools find documents. Receipts answers decisions.
+
+2
+00:00:18,000 --> 00:00:38,000
+A receipt: evidence, approver, owner, confidence.
+
+3
+00:00:38,000 --> 00:00:58,000
+Time travel: September 2025 says Auth0.
+
+4
+00:00:58,000 --> 00:01:18,000
+Current decision. Withdrawn evidence.
+
+5
+00:01:18,000 --> 00:01:40,000
+Seven findings a keyword index cannot produce.
+
+6
+00:01:40,000 --> 00:01:55,000
+Every answer has a receipt. Built on Relate.
+
+
